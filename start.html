@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dratewka The Shoemaker</title>
+    <script>
+    function intro(){
+        var hejnal=document.createElement('object');
+        hejnal.setAttribute('type','audio/mp3');
+        hejnal.setAttribute('src', 'hejnal.mp3');
+        hejnal.setAttribute('autostart', true);
+        hejnal.style.position = "absolute";
+        hejnal.style.width = "0px";
+        hejnal.style.height = "0px";
+        document.getElementsByTagName('body')[0].appendChild(hejnal);
+
+        document.getElementById("start").style.backgroundSize = "80%"
+        document.getElementById("start").style.backgroundPositionX = "center"
+        document.getElementById("start").style.backgroundRepeat = "no-repeat"
+        document.getElementById("start").style.backgroundImage = "url('czolowka.jpg')"
+        document.getElementById("start").style.backgroundColor = "rgb(1,44,0)"
+        setTimeout(function(){
+            document.getElementById("start").style.backgroundImage = "url('opis_A.jpg')"
+                    }, 10000)
+        setTimeout(function(){
+            document.getElementById("start").style.backgroundImage = "url('opis_B.jpg')"
+                    }, 26000)
+        setTimeout(function(){
+            window.location.href = "duratewuka.html";
+                    }, 40000)
+
+    }
+    </script>
+</head>
+<body id="start" onload="intro()">
+    
+</body>
+</html>
